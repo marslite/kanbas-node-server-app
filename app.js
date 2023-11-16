@@ -11,15 +11,19 @@ import cors from "cors";
 
 // const express = require('express');
 const app = express();
-// app.listen(process.env.PORT || 4000)
+
 app.use(express.json());
 app.use(cors({
     credentials:true,
     origin: process.env.FRONTEND_URL
 }));
+
+// app.use(cors());
+
+
 ModuleRoutes(app);
 CourseRoutes(app);
 Lab5(app);
 Hello(app);
 
-app.listen( process.env.PORT ||4000);
+app.listen( process.env.PORT || 4000);
