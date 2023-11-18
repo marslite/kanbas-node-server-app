@@ -1,5 +1,5 @@
 import "dotenv/config.js"
-import session from "express-session"
+// import session from "express-session"
 import express from "express";
 import Hello from "./hello.js";
 import Lab5 from "./lab5.js";
