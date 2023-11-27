@@ -11,7 +11,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum: ["STUDENT", "FACULTY", "ADMIN", "USER"],
         default: "USER"},
-}, 
-{collation: "users"});
+},
+//Removing collation allows for the Routes to work properly otherwise it throws a Mongodb server connection error
+
+{collection: "users"}
+
+);
 
 export default userSchema;
