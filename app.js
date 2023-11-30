@@ -1,5 +1,5 @@
 import "dotenv/config.js"
-// import session from "express-session"
+import session from "express-session"
 import express from "express";
 import Hello from "./hello.js";
 import Lab5 from "./lab5.js";
@@ -13,7 +13,17 @@ mongoose.connect("mongodb://127.0.0.1:27017/kanbas")
 
 // const express = require('express');
 const app = express();
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+}));
+const sessionOptions ={
+    secret: "anything",
+    resave: false,
+    saveUninitialized: false,
+};
+app.use(session(sessionOptions))
+
 app.use(express.json());
 // app.use(cors({
 //     credentials:true,
