@@ -8,7 +8,12 @@ import ModuleRoutes from "./modules/routes.js";
 import mongoose from "mongoose"
 import UserRoutes from "./users/routes.js"
 import cors from "cors";
-mongoose.connect("mongodb://127.0.0.1:27017/kanbas")
+
+// const CONNECTION_STRING = process.env.CONNECTION_STRING 
+const DB_CONNTECTION_STRING = 'mongodb+srv://baynet:bblock300@cluster0.abrirnz.mongodb.net/?retryWrites=true&w=majority'
+// || 'mongodb://127.0.0.1:27017/kanbas'
+mongoose.connect(DB_CONNTECTION_STRING)
+// mongoose.connect("mongodb://127.0.0.1:27017/kanbas")
 
 
 // const express = require('express');
