@@ -27,7 +27,7 @@ const app = express();
 app.use(cors({
     credentials: true,
     origin: (origin, callback) => {
-      const allowedOrigins = ["http://localhost:3000", process.env.FRONT_END];
+      const allowedOrigins = ["http://localhost:3000", process.env.FRONT_END, "https://kanbas-node-server-app-zi6l.onrender.com"];
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
