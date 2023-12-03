@@ -13,7 +13,7 @@ import cors from "cors";
 
 const DB_CONNECTION_STRING = process.env.DB_CONNECTION_STRING
 // || 'mongodb://127.0.0.1:27017/kanbas'
-mongoose.connect(DB_CONNTECTION_STRING)
+mongoose.connect(DB_CONNECTION_STRING)
 // mongoose.connect("mongodb://127.0.0.1:27017/kanbas")
 
 
