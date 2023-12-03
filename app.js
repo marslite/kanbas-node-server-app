@@ -19,22 +19,22 @@ mongoose.connect(DB_CONNECTION_STRING)
 
 // const express = require('express');
 const app = express();
-// app.use(cors({
-//     credentials: true,
-//     // origin: "http://localhost:3000",
-//     origin: ["https://kanbas-node-server-app-zi6l.onrender.com", process.env.FRONT_END, "http://localhost:3000"]
-// }));
 app.use(cors({
     credentials: true,
-    origin: (origin, callback) => {
-      const allowedOrigins = ["http://localhost:3000", process.env.FRONT_END, "https://kanbas-node-server-app-zi6l.onrender.com"];
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    }
-  }));
+    // origin: "http://localhost:3000",
+    origin: ["https://kanbas-node-server-app-zi6l.onrender.com", process.env.FRONT_END, "http://localhost:3000"]
+}));
+// app.use(cors({
+//     credentials: true,
+//     origin: (origin, callback) => {
+//       const allowedOrigins = ["http://localhost:3000", process.env.FRONT_END, "https://kanbas-node-server-app-zi6l.onrender.com"];
+//       if (!origin || allowedOrigins.includes(origin)) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error('Not allowed by CORS'));
+//       }
+//     }
+//   }));
   
 
 const sessionOptions ={
