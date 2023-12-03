@@ -22,7 +22,7 @@ const app = express();
 app.use(cors({
     credentials: true,
     // origin: "http://localhost:3000",
-    origin: [process.env.FRONT_END, "http://localhost:3000", "https://kanbas-node-server-app-zi6l.onrender.com"]
+    origin: ["https://kanbas-node-server-app-zi6l.onrender.com", process.env.FRONT_END, "http://localhost:3000"]
 }));
 const sessionOptions ={
     secret: "anything",
